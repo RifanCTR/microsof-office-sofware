@@ -1,3 +1,4 @@
+<img width="772" height="494" alt="Screenshot 2026-10-03 082952" src="https://github.com/user-attachments/assets/1411182b-c99e-46f3-a6ae-71950de1a0f6" />
 # Cara Menghapus & Menginstal Microsoft Office
 
 > Panduan lengkap untuk menghapus Microsoft Word, Excel, dan PowerPoint, membersihkan sisa Office, kemudian melakukan instalasi kembali menggunakan Office Deployment Tool (ODT).
@@ -415,6 +416,8 @@ setup.exe /configure configuration.xml
 ```
 
 Tekan **Enter**.
+<img width="772" height="494" alt="Screenshot 2026-10-03 082952" src="https://github.com/user-attachments/assets/82e9c7bf-4e75-49b0-85ec-46cb851880ce" />
+
 
 Office Deployment Tool akan mulai memasang Microsoft Office berdasarkan konfigurasi yang sudah dibuat.
 
