@@ -1,52 +1,79 @@
-# Cara Menghapus Microsoft Word, Excel, dan PowerPoint Sampai Bersih
+# Cara Menghapus & Menginstal Microsoft Office
 
-Tutorial ini menjelaskan cara **menghapus Microsoft Office sampai bersih**, kemudian memasangnya kembali menggunakan **Office Deployment Tool**.
-
-Cara ini cocok dilakukan jika Office mengalami error, gagal dibuka, atau ingin melakukan instalasi ulang dengan kondisi yang lebih bersih.
+> Panduan lengkap untuk menghapus Microsoft Word, Excel, dan PowerPoint, membersihkan sisa Office, kemudian melakukan instalasi kembali menggunakan Office Deployment Tool (ODT).
 
 ---
 
-# BAGIAN 1 — MENGHAPUS MICROSOFT OFFICE
+## Daftar Isi
 
-## 1. Hapus Office melalui Settings
-
-Pertama, buka Settings dengan menekan:
-
-**Windows + I**
-
-Kemudian pilih:
-
-**Aplikasi → Aplikasi terinstal**
-
-Pada kolom pencarian, cari:
-
-* Microsoft 365
-* Microsoft Office
-* Office
-
-Nama Office bisa berbeda-beda tergantung versi yang digunakan.
-
-Contohnya:
-
-**Microsoft Office LTSC Professional Plus 2021 - en-us**
-
-Jika sudah ditemukan:
-
-**Klik ⋯ → Uninstall / Hapus instalan**
-
-Ikuti prosesnya sampai selesai.
+* [1. Menghapus Microsoft Office](#1-menghapus-microsoft-office)
+* [2. Membersihkan Sisa Office](#2-membersihkan-sisa-office)
+* [3. Download Office Deployment Tool](#3-download-office-deployment-tool)
+* [4. Extract File](#4-extract-file)
+* [5. Menyiapkan Folder Office](#5-menyiapkan-folder-office)
+* [6. Memilih Configuration](#6-memilih-configuration)
+* [7. Download File Office](#7-download-file-office)
+* [8. Install Microsoft Office](#8-install-microsoft-office)
+* [9. Selesai](#9-selesai)
 
 ---
 
-## 2. Cek Office melalui Control Panel
+# 1. Menghapus Microsoft Office
 
-Setelah itu, kita cek apakah Office masih terdaftar di Windows.
+Sebelum memasang Office kembali, hapus instalasi Office yang lama terlebih dahulu.
+
+Hal ini berguna untuk menghindari konflik dengan instalasi Office sebelumnya.
+
+## Uninstall melalui Settings
 
 Tekan:
 
-**Windows + R**
+```text
+Windows + I
+```
 
-Kemudian ketik:
+Kemudian buka:
+
+```text
+Aplikasi
+→ Aplikasi terinstal
+```
+
+Pada kolom pencarian, cari:
+
+```text
+Microsoft 365
+Microsoft Office
+Office
+```
+
+Nama Office dapat berbeda tergantung versi yang terpasang.
+
+Contohnya:
+
+```text
+Microsoft Office LTSC Professional Plus 2021 - en-us
+```
+
+Jika sudah ditemukan:
+
+```text
+⋯ → Uninstall / Hapus instalan
+```
+
+Ikuti proses uninstall sampai selesai.
+
+---
+
+## Uninstall melalui Control Panel
+
+Jika Office masih muncul atau ingin memastikan kembali, tekan:
+
+```text
+Windows + R
+```
+
+Kemudian masukkan:
 
 ```text
 appwiz.cpl
@@ -54,79 +81,82 @@ appwiz.cpl
 
 Tekan **Enter**.
 
-Akan muncul jendela **Programs and Features**.
+Akan muncul jendela:
+
+```text
+Programs and Features
+```
 
 Cari:
 
-* Microsoft Office
-* Microsoft 365
-* atau paket Microsoft Office lainnya
+```text
+Microsoft Office
+Microsoft 365
+```
 
-Jika masih ada, klik Office tersebut lalu pilih:
+atau paket Office lainnya.
 
-**Uninstall**
+Kemudian pilih:
 
-Ikuti prosesnya sampai selesai.
+```text
+Uninstall
+```
 
----
-
-## 3. Gunakan Tool Resmi Microsoft
-
-Jika ingin menghapus Office dengan lebih menyeluruh, gunakan panduan resmi Microsoft:
-
-**Microsoft — Menghapus instalan Microsoft 365 atau Office dari PC**
-
-https://support.microsoft.com/id-id/office/lifecycle/officeinstall/uninstall-microsoft-365-or-office-from-a-pc
-
-Ikuti petunjuk yang diberikan Microsoft dan gunakan tool penghapusan jika tersedia untuk versi Office yang digunakan.
-
-Setelah selesai, **restart komputer**.
+Tunggu sampai proses selesai.
 
 ---
 
-# BAGIAN 2 — MEMBERSIHKAN SISA OFFICE
+# 2. Membersihkan Sisa Office
 
-Setelah komputer menyala kembali, kita bisa mengecek apakah masih ada folder Office yang tertinggal.
+Setelah Office berhasil dihapus, restart komputer terlebih dahulu.
+
+Setelah komputer menyala kembali, kita dapat mengecek beberapa folder yang mungkin masih tersisa.
 
 Tekan:
 
-**Windows + R**
+```text
+Windows + R
+```
 
-Kemudian masukkan lokasi berikut satu per satu.
+Kemudian cek lokasi berikut satu per satu.
 
-### Folder 1
+### Program Files
 
 ```text
 %ProgramFiles%\Microsoft Office
 ```
 
-### Folder 2
+### Program Files (x86)
 
 ```text
 %ProgramFiles(x86)%\Microsoft Office
 ```
 
-### Folder 3
+### ProgramData
 
 ```text
 %ProgramData%\Microsoft\Office
 ```
 
-### Folder 4
+### AppData
 
 ```text
 %AppData%\Microsoft\Office
 ```
 
-### Folder 5
+### LocalAppData
 
 ```text
 %LocalAppData%\Microsoft\Office
 ```
 
-Tidak semua folder tersebut pasti masih ada. Kalau Windows mengatakan folder tidak ditemukan, **tidak masalah**.
+Tidak semua folder tersebut pasti masih ada.
 
-Biasanya folder berikut masih bisa ditemukan:
+Jika Windows mengatakan folder tidak ditemukan, tidak perlu khawatir.
+
+## Menghapus Folder Sisa
+
+Pada beberapa instalasi, folder berikut masih dapat ditemukan:
 
 ```text
 %AppData%\Microsoft\Office
@@ -138,7 +168,13 @@ dan:
 %LocalAppData%\Microsoft\Office
 ```
 
-Jika Office sudah berhasil di-uninstall dan folder tersebut memang merupakan sisa Office, folder **Office** dapat dihapus.
+Jika Office sudah benar-benar di-uninstall dan folder tersebut memang hanya berisi sisa Office, folder:
+
+```text
+Office
+```
+
+dapat dihapus.
 
 Contohnya:
 
@@ -147,47 +183,54 @@ Microsoft
 └── Office
 ```
 
-Yang dihapus hanya:
+Yang dihapus:
 
 ```text
 Office
 ```
 
-**Jangan hapus folder `Microsoft` secara keseluruhan**, karena folder tersebut digunakan oleh banyak aplikasi dan komponen Windows lainnya.
+Bukan:
 
-Setelah selesai, Office lama sudah dihapus dan sisa folder Office yang masih tertinggal juga sudah dibersihkan.
+```text
+Microsoft
+```
 
----
-
-# BAGIAN 3 — MENYIAPKAN FILE INSTALLER OFFICE
-
-Setelah Office lama dihapus, kita bisa melakukan instalasi Office kembali menggunakan **Office Deployment Tool (ODT)**.
-
-## 1. Download file Office Deployment Tool
-
-Download **Office Deployment Tool** dari sumber yang digunakan untuk menyediakan file instalasi.
-
-Jika file tersedia di GitHub:
-
-Klik:
-
-**Code → Download ZIP**
-
-Setelah selesai download, cari file ZIP tersebut.
+> Jangan menghapus seluruh folder `Microsoft`. Folder tersebut digunakan oleh banyak aplikasi Windows lainnya.
 
 ---
 
-## 2. Extract file ZIP
+# 3. Download Office Deployment Tool
 
-Klik kanan file ZIP → pilih:
+Setelah Office lama dibersihkan, kita dapat menyiapkan instalasi Office menggunakan:
 
-**Extract All...**
+**Office Deployment Tool (ODT)**
+
+Download file ODT dari sumber yang digunakan untuk menyediakan installer.
+
+Jika file tersedia dalam bentuk repository GitHub:
+
+```text
+Code → Download ZIP
+```
+
+Kemudian tunggu sampai file selesai didownload.
+
+---
+
+# 4. Extract File
+
+Setelah file ZIP selesai didownload:
+
+```text
+Klik kanan file ZIP
+→ Extract All...
+```
 
 Kemudian pilih lokasi untuk menyimpan hasil extract.
 
-Setelah selesai, buka folder hasil extract tersebut.
+Buka folder hasil extract tersebut.
 
-Di dalamnya biasanya terdapat file seperti:
+Di dalamnya biasanya terdapat file atau folder seperti:
 
 ```text
 Office Deployment Tool
@@ -197,80 +240,85 @@ Configuration 64 bit
 
 ---
 
-## 3. Jalankan Office Deployment Tool
+# 5. Menyiapkan Folder Office
 
-Buka file:
+Buka:
 
-**Office Deployment Tool**
+```text
+Office Deployment Tool
+```
 
-Centang:
+Kemudian centang:
 
-**I accept the Microsoft Software License Terms**
+```text
+I accept the Microsoft Software License Terms
+```
 
-Kemudian klik:
+Klik:
 
-**Continue**
+```text
+Continue
+```
 
-Windows akan meminta lokasi untuk menyimpan file hasil extract.
-
-Kita akan membuat folder khusus untuk Office.
+Selanjutnya pilih lokasi untuk menyimpan file Office Deployment Tool.
 
 Pilih:
 
-**This PC → Local Disk (C:)**
+```text
+This PC
+→ Local Disk (C:)
+```
 
-Kemudian klik:
-
-**Make New Folder**
-
-Buat folder dengan nama:
+Kemudian buat folder baru:
 
 ```text
 MsOffice
 ```
 
-Sehingga lokasinya menjadi:
+Sehingga lokasi folder menjadi:
 
 ```text
 C:\MsOffice
 ```
 
-Pilih folder tersebut lalu klik **OK**.
+Pilih folder tersebut dan lanjutkan.
 
 ---
 
-# BAGIAN 4 — MEMILIH KONFIGURASI OFFICE
+# 6. Memilih Configuration
 
-Di folder yang sebelumnya sudah disiapkan, terdapat pilihan konfigurasi:
+Pada file yang sudah disiapkan, biasanya terdapat pilihan:
 
 ```text
 Configuration 32 bit
 Configuration 64 bit
 ```
 
-Pilih konfigurasi sesuai kebutuhan komputer.
+Pilih sesuai arsitektur Office yang ingin digunakan.
 
-Jika menggunakan Windows 64-bit, umumnya gunakan:
+Contoh:
 
-**Configuration 64 bit**
+```text
+Configuration 64 bit
+```
 
-Setelah memilihnya, buka folder tersebut.
+Buka folder tersebut.
 
-Di dalamnya terdapat file:
+Cari file:
 
 ```text
 Configuration.xml
 ```
 
-Salin file tersebut.
-
-Kemudian pindahkan ke:
+Salin file tersebut ke:
 
 ```text
 C:\MsOffice
 ```
 
-Jadi isi foldernya kurang lebih seperti:
+Pastikan file utama berada di folder yang sama.
+
+Contohnya:
 
 ```text
 C:\MsOffice
@@ -279,19 +327,21 @@ C:\MsOffice
 └── configuration.xml
 ```
 
-Pastikan **setup.exe** dan **configuration.xml** berada di folder yang sama.
+> File `configuration.xml` berisi pengaturan instalasi Office, seperti versi, bahasa, arsitektur, dan aplikasi yang akan dipasang.
 
 ---
 
-# BAGIAN 5 — MENDOWNLOAD FILE OFFICE
+# 7. Download File Office
 
-Sekarang kita mulai proses download file Office.
+Sekarang kita akan mendownload file Office menggunakan Command Prompt.
 
-## 1. Buka Command Prompt sebagai Administrator
+## Buka CMD sebagai Administrator
 
 Tekan tombol:
 
-**Windows**
+```text
+Windows
+```
 
 Kemudian cari:
 
@@ -305,19 +355,24 @@ atau:
 Command Prompt
 ```
 
-Klik kanan **Command Prompt** → pilih:
-
-**Run as administrator**
-
-Jika muncul pertanyaan dari Windows, pilih **Yes**.
-
----
-
-## 2. Masuk ke folder Office
-
-Di Command Prompt, masukkan:
+Klik kanan:
 
 ```text
+Command Prompt
+→ Run as administrator
+```
+
+Jika muncul User Account Control, pilih:
+
+```text
+Yes
+```
+
+## Masuk ke Folder Office
+
+Di CMD masukkan:
+
+```bat
 cd C:\MsOffice
 ```
 
@@ -325,19 +380,19 @@ Kemudian tekan **Enter**.
 
 Setelah itu jalankan:
 
-```text
+```bat
 setup.exe /download configuration.xml
 ```
 
 Tekan **Enter**.
 
-Office Deployment Tool akan mulai mendownload file Office sesuai konfigurasi yang dipilih.
+Office Deployment Tool akan mulai mendownload file Office.
 
-**Proses ini bisa memerlukan waktu cukup lama**, tergantung ukuran file dan kecepatan internet.
+Proses ini bisa memerlukan waktu cukup lama tergantung koneksi internet dan ukuran file Office.
 
-Jangan tutup Command Prompt selama proses masih berjalan.
+Jangan tutup CMD selama proses masih berjalan.
 
-Setelah proses download selesai, file Office akan tersimpan di folder:
+Setelah selesai, file Office akan tersimpan di:
 
 ```text
 C:\MsOffice
@@ -345,111 +400,116 @@ C:\MsOffice
 
 ---
 
-# BAGIAN 6 — MEMASANG MICROSOFT OFFICE
+# 8. Install Microsoft Office
 
-Setelah proses download selesai, kembali ke Command Prompt yang tadi.
-
-Pastikan masih berada di:
+Setelah proses download selesai, pastikan CMD masih berada di:
 
 ```text
 C:\MsOffice
 ```
 
-Kemudian masukkan:
+Kemudian jalankan:
 
-```text
+```bat
 setup.exe /configure configuration.xml
 ```
 
 Tekan **Enter**.
 
-Windows akan menjalankan proses instalasi Office berdasarkan konfigurasi yang sudah dibuat.
+Office Deployment Tool akan mulai memasang Microsoft Office berdasarkan konfigurasi yang sudah dibuat.
 
 Tunggu sampai proses instalasi selesai.
 
 ---
 
-# BAGIAN 7 — SELESAI
+# 9. Selesai
 
-Jika proses instalasi selesai, buka **Start Menu** dan cari:
-
-* Word
-* Excel
-* PowerPoint
-
-Jika aplikasi tersebut sudah muncul dan dapat dibuka, berarti instalasi Office sudah selesai.
-
-## Ringkasnya
-
-Urutan prosesnya adalah:
-
-**Hapus Office lama**
-
-↓
-
-**Restart komputer**
-
-↓
-
-**Bersihkan sisa folder Office**
-
-↓
-
-**Download Office Deployment Tool**
-
-↓
-
-**Extract file**
-
-↓
-
-**Buat folder `C:\MsOffice`**
-
-↓
-
-**Masukkan `setup.exe` + `configuration.xml`**
-
-↓
-
-**Buka CMD sebagai Administrator**
-
-↓
+Setelah instalasi selesai, buka:
 
 ```text
-cd C:\MsOffice
+Start Menu
 ```
 
-↓
+Kemudian cari:
 
 ```text
-setup.exe /download configuration.xml
+Word
+Excel
+PowerPoint
 ```
 
-↓
-
-**Tunggu download selesai**
-
-↓
-
-```text
-setup.exe /configure configuration.xml
-```
-
-↓
-
-**Tunggu instalasi selesai**
-
-↓
-
-**Buka Word / Excel / PowerPoint**
+Jika aplikasi sudah muncul dan dapat dibuka, berarti proses instalasi Office sudah selesai.
 
 ---
 
-### Catatan Penting
+## Alur Singkat
 
-* Jangan menghapus seluruh folder `Microsoft` di `AppData`, `ProgramData`, atau `Program Files`.
-* Yang dibersihkan secara manual hanya folder yang memang merupakan **sisa Office**.
-* Pastikan file `setup.exe` dan `configuration.xml` berada di folder yang sama.
-* Jangan menutup CMD ketika proses `/download` atau `/configure` masih berjalan.
-* Pastikan konfigurasi **32-bit atau 64-bit** sesuai dengan Office yang ingin dipasang.
-* File `configuration.xml` menentukan jenis Office, bahasa, arsitektur, dan pengaturan instalasi yang digunakan.
+```text
+Hapus Office Lama
+        ↓
+Restart Windows
+        ↓
+Bersihkan Sisa Office
+        ↓
+Download Office Deployment Tool
+        ↓
+Extract File ZIP
+        ↓
+Buat C:\MsOffice
+        ↓
+Masukkan configuration.xml
+        ↓
+Buka CMD sebagai Administrator
+        ↓
+cd C:\MsOffice
+        ↓
+setup.exe /download configuration.xml
+        ↓
+Tunggu Download Selesai
+        ↓
+setup.exe /configure configuration.xml
+        ↓
+Microsoft Office Terpasang
+```
+
+---
+
+## Catatan Penting
+
+* Pastikan Office lama sudah di-uninstall sebelum melakukan instalasi ulang.
+* Jangan menghapus seluruh folder `Microsoft`.
+* Hapus hanya folder yang memang merupakan sisa Office.
+* Jangan menghapus folder sistem Windows secara sembarangan.
+* Pastikan `setup.exe` dan `configuration.xml` berada pada lokasi yang benar.
+* Gunakan CMD sebagai Administrator.
+* Jangan menutup CMD ketika proses download atau instalasi masih berlangsung.
+* Pastikan konfigurasi Office yang digunakan sesuai dengan kebutuhan.
+* Gunakan lisensi atau aktivasi Office yang sah untuk edisi yang dipasang.
+
+---
+
+## Hasil Akhir
+
+Setelah seluruh proses selesai, Microsoft Office akan terpasang kembali sesuai konfigurasi yang digunakan.
+
+Contohnya:
+
+```text
+Microsoft Word
+Microsoft Excel
+Microsoft PowerPoint
+```
+
+Panduan ini dapat digunakan sebagai langkah untuk melakukan:
+
+```text
+Clean Uninstall
+       ↓
+Clean Up
+       ↓
+Download
+       ↓
+Install
+```
+
+Dengan begitu, instalasi Office lama sudah dihapus terlebih dahulu sebelum melakukan instalasi baru.
