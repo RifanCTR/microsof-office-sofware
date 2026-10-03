@@ -1,5 +1,6 @@
 
-<img width="1920" height="768" alt="vecteezy_illustration-of-microsoft-word-excel-power-point-mobile_" src="https://github.com/user-attachments/assets/b99258a6-6639-42f2-9279-f117de9854c6" />
+![Uploading vecteezy_illustration-of-microsoft-word-excel-power-point-mobile_.jpg…]()
+
 # Cara Menghapus & Menginstal Microsoft Office
 
 > Panduan lengkap untuk menghapus Microsoft Word, Excel, dan PowerPoint, membersihkan sisa Office, kemudian melakukan instalasi kembali menggunakan Office Deployment Tool (ODT).
