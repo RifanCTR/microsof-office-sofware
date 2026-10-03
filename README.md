@@ -417,6 +417,8 @@ setup.exe /configure configuration.xml
 
 Tekan **Enter**.
 
+<img width="772" height="494" alt="Screenshot 2026-10-03 082952" src="https://github.com/user-attachments/assets/cfe0795c-9f36-4236-ba0f-8f567a89d253" />
+
 
 Office Deployment Tool akan mulai memasang Microsoft Office berdasarkan konfigurasi yang sudah dibuat.
 
