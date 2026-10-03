@@ -1,4 +1,3 @@
-
 # Cara Menghapus & Menginstal Microsoft Office
 
 > Panduan lengkap untuk menghapus Microsoft Word, Excel, dan PowerPoint, membersihkan sisa Office, kemudian melakukan instalasi kembali menggunakan Office Deployment Tool (ODT).
@@ -162,12 +161,16 @@ Pada beberapa instalasi, folder berikut masih dapat ditemukan:
 ```text
 %AppData%\Microsoft\Office
 ```
+<img width="822" height="637" alt="Screenshot 2026-10-03 072533" src="https://github.com/user-attachments/assets/f99ee9ce-57fd-45d5-8864-a816bd35fff1" />
+
 
 dan:
 
 ```text
 %LocalAppData%\Microsoft\Office
 ```
+<img width="841" height="641" alt="Screenshot 2026-10-03 072634" src="https://github.com/user-attachments/assets/f338d95f-71ba-4a1d-aa2e-057820c8d876" />
+
 
 Jika Office sudah benar-benar di-uninstall dan folder tersebut memang hanya berisi sisa Office, folder:
 
